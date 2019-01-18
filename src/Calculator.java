@@ -1,24 +1,29 @@
 public class Calculator {
     private int memory;
 
-    public void addNumbers(int num1, int num2){
-        System.out.println(num1+num2);
+    public int addNumbers(int num1, int num2){
+        int calc = num1 + num2;
+        return calc;
     }
 
-    public void subtractNumbers(int num1, int num2){
-        System.out.println(num1-num2);
+    public int subtractNumbers(int num1, int num2){
+        int calc = num1 + num2;
+        return calc;
     }
 
-    public void multiplyNumbers(int num1, int num2){
-        System.out.println(num1*num2);
+    public int multiplyNumbers(int num1, int num2){
+        int calc = num1 * num2;
+        return calc;
     }
 
-    public void divideNumbers(int num1, int num2){
-        System.out.println(num1/num2);
+    public int divideNumbers(int num1, int num2){
+        int calc = num1 / num2;
+        return calc;
     }
 
-    public void sqrRoot(int num1){
-        System.out.printf("%.2f",(double) Math.sqrt(num1));
+    public double sqrRoot(int num1){
+        double calc = Math.sqrt((double) num1);
+        return calc;
     }
 
     public void setMemory(int memory){
@@ -30,17 +35,21 @@ public class Calculator {
     }
 
     public void clearMemory(){
-
+        memory = 0;
     }
 
 
-
     public static void main(String[] args) {
-         Calculator calculator = new Calculator();
-         calculator.addNumbers(1,2);
-         calculator.subtractNumbers(10,5);
-         calculator.multiplyNumbers(2,2);
-         calculator.divideNumbers(4,2);
-         calculator.sqrRoot(12);
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.addNumbers(1,2));
+        System.out.println(calculator.subtractNumbers(10,5));
+        System.out.println(calculator.multiplyNumbers(2,2));
+        System.out.println(calculator.divideNumbers(4,2));
+        System.out.printf("%.2f\n",calculator.sqrRoot(12));
+        System.out.println(calculator.getMemory());
+        calculator.setMemory(10009);
+        System.out.println(calculator.getMemory());
+        calculator.clearMemory();
+        System.out.println(calculator.getMemory());
     }
 }
