@@ -52,4 +52,6 @@ public class Calculator {
         calculator.clearMemory();
         System.out.println(calculator.getMemory());
     }
+
+    //Glenn
 }
